@@ -12,11 +12,9 @@ import { ItemsService } from './items/items.service';
 })
 export class AppModule {
   public configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(AuthenticationMiddleware)
-      .forRoutes(
-        { path: '/items', method: RequestMethod.POST },
-        { path: '/shopping-cart', method: RequestMethod.POST },
-      );
+    consumer.apply(AuthenticationMiddleware).forRoutes(
+      // { path: '/items', method: RequestMethod.POST },
+      { path: '/shopping-cart', method: RequestMethod.POST }
+    );
   }
 }
