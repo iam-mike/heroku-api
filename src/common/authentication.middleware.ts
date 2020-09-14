@@ -12,7 +12,7 @@ export class AuthenticationMiddleware implements NestMiddleware {
         jwksUri: 'https://mw-pizza42.eu.auth0.com/.well-known/jwks.json',
       }),
 
-      audience: 'https://mw-pizza42-api.herokuapp.com',
+      aud: 'https://mw-pizza42-api.herokuapp.com',
       issuer: 'https://mw-pizza42.eu.auth0.com/',
       algorithm: 'RS256',
     })(req, res, err => {
