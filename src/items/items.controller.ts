@@ -23,7 +23,7 @@ export class ItemsController {
 
   @Post()
   // @UseGuards(new AdminGuard())
-  @UsePipes(new ValidationPipe())
+  // @UsePipes(new ValidationPipe())
   async create(@Body() createItemDto: CreateItemDto) {
     this.itemsService.create(createItemDto);
   }
