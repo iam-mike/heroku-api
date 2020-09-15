@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 let AdminGuard = class AdminGuard {
     canActivate(context) {
-        const user = context.getArgs()[0].user['https://mw-pizza42-app.herokuapp.com/roles'] || '';
+        const user = context.getArgs()[0].user['http://localhost:3000/roles'] || '';
         return user.indexOf('menu-admin') > -1;
     }
 };
@@ -19,7 +19,7 @@ AdminGuard = __decorate([
 exports.AdminGuard = AdminGuard;
 class UserGuard {
     canActivate(context) {
-        const user = context.getArgs()[0].user['https://mw-pizza42-app.herokuapp.com/roles'] || '';
+        const user = context.getArgs()[0].user['http://localhost:3000/roles'] || '';
         return user.indexOf('verified-user') > -1;
     }
 }

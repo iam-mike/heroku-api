@@ -11,7 +11,7 @@ class AuthenticationMiddleware {
                 jwksRequestsPerMinute: 5,
                 jwksUri: 'https://mw-pizza42.eu.auth0.com/.well-known/jwks.json',
             }),
-            audience: 'https://mw-pizza42-app.herokuapp.com',
+            audience: 'http://localhost:3000',
             issuer: 'https://mw-pizza42.eu.auth0.com/',
             algorithm: 'RS256',
         })(req, res, err => {

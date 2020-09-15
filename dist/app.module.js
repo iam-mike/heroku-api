@@ -13,7 +13,7 @@ const shopping_cart_controller_1 = require("./shopping-cart/shopping-cart.contro
 const items_service_1 = require("./items/items.service");
 let AppModule = class AppModule {
     configure(consumer) {
-        consumer.apply(authentication_middleware_1.AuthenticationMiddleware).forRoutes({ path: '/items', method: common_1.RequestMethod.POST }, { path: '/shopping-cart', method: common_1.RequestMethod.POST });
+        consumer.apply(authentication_middleware_1.AuthenticationMiddleware).forRoutes({ path: '/shopping-cart', method: common_1.RequestMethod.POST });
     }
 };
 AppModule = __decorate([
